@@ -113,24 +113,38 @@ function drawLeftArm() {
 // typing part of the game
 
 const arrayQuote =
-  [ // 8 quotes (Some are harder and longer on purpose)
-    "A leader is best when people barely know he exists, when his work is done, his aim fulfilled, they will say: we did it ourselves. (Lao Tzu)",
+  [ // 16 quotes (Some are harder and longer on purpose)
+    "I could believe in hell, but it was impossible for me to believe in the existence of heaven. ('No Longer Human' Osamu Dazai)",
 
-    "Beloved Pan, and all ye other gods who haunt this place, give me beauty in the inward soul; and may the outward and inward be at one. (Socrates)",
+    "We sometimes encounter people, even perfect strangers, who begin to interest us at first sight, somehow suddenly, all at once, before a word has been spoken ('Crime and Punishment' Fyodor Dostoevsky)",
 
-    "When I examine myself and my methods of thought, I come to the conclusion that the gift of fantasy has meant more to me than my talent for absorbing positive knowledge. (Albert Einstein)",
+    "To go wrong in one's own way is better than to go right in someone else's. ('Crime and Punishment' Fyodor Dostoevsky)",
 
-    "There was something mysterious in the air that morning. Nothing was done in its regular order and several of the native servants seemed missing, while those whom Mary saw slunk or hurried about with ashy and scared faces. But no one would tell her anything and her Ayah did not come. She was actually left alone as the morning went on, and at last she wandered out into the garden and began to play by herself under a tree near the veranda. She pretended that she was making a flower-bed, and she stuck big scarlet hibiscus blossoms into little heaps of earth, all the time growing more and more angry and muttering to herself the things she would say and the names she would call Saidie when she returned. ('The Secret Garden' by Frances Hodgson Burnett)",
+    "Some had said that they could not write because of military censorship, but the fact was that, war or no war, they had not the slightest idea how to write honestly on any subject. Truth or real feeling in writing had nothing to do with censorship. In whatever period these gentry had happened to live, their personalities would have been bound to display the same emptiness. They changed in accordance with the prevailing fashion and took for their models expression culled from popular novels of the day. ('Sakaguchi Ango)",
 
-    "You can easily imagine what a father such a man could be and how he would bring up his children. His behavior as a father was exactly what might be expected. He completely abandoned the child of his marriage with Adelaida Ivanovna, not from malice, nor because of his matrimonial grievances, but simply because he forgot him. While he was wearying every one with his tears and complaints, and turning his house into a sink of debauchery, a faithful servant of the family, Grigory, took the three‐year‐old Mitya into his care. If he hadn't looked after him there would have been no one even to change the baby's little shirt. ('The Brothers Karamazov' by Fyodor Dostoyevsky)",
+    "You can easily imagine what a father such a man could be and how he would bring up his children. His behavior as a father was exactly what might be expected. He completely abandoned the child of his marriage with Adelaida Ivanovna, not from malice, nor because of his matrimonial grievances, but simply because he forgot him. While he was wearying every one with his tears and complaints, and turning his house into a sink of debauchery, a faithful servant of the family, Grigory, took the three‐year‐old Mitya into his care. If he hadn't looked after him there would have been no one even to change the baby's little shirt. ('The Brothers Karamazov' Fyodor Dostoyevsky)",
 
-    "Buck lived at a big house in the sun-kissed Santa Clara Valley. Judge Miller's place, it was called. It stood back from the road, half hidden among the trees, through which glimpses could be caught of the wide cool veranda that ran around its four sides. The house was approached by gravelled driveways which wound about through wide-spreading lawns and under the interlacing boughs of tall poplars. At the rear things were on even a more spacious scale than at the front. There were great stables, where a dozen grooms and boys held forth, rows of vine-clad servants' cottages, an endless and orderly array of outhouses, long grape arbors, green pastures, orchards, and berry patches. Then there was the pumping plant for the artesian well, and the big cement tank where Judge Miller's boys took their morning plunge and kept cool in the hot afternoon. ('The Call of the Wild' by Jack London)",
+    "A man sometimes devotes his life to a desire which he is not sure will ever be fulfilled. Those who laugh at this folly are, after all, no more than mere spectators of life. ('Rashomon and Other Stories' Ryunosuke Akutagawa)",
 
-    "Tell me, O Muse, of that ingenious hero who travelled far and wide after he had sacked the famous town of Troy. Many cities did he visit, and many were the nations with whose manners and customs he was acquainted; moreover he suffered much by sea while trying to save his own life and bring his men safely home; but do what he might he could not save his men, for they perished through their own sheer folly in eating the cattle of the Sun-god Hyperion; so the god prevented them from ever reaching home. Tell me, too, about all these things, oh daughter of Jove, from whatsoever source you may know them. ('The Odyssey' by Homer)",
+    "For someone like myself in whom the ability to trust others is so cracked and broken that I am wretchedly timid and am forever trying to read the expression on people's faces. ('No Longer Human' Osamu Dazai)",
 
-    "Margaret, the eldest of the four, was sixteen, and very pretty, being plump and fair, with large eyes, plenty of soft brown hair, a sweet mouth, and white hands, of which she was rather vain. Fifteen-year-old Jo was very tall, thin, and brown, and reminded one of a colt, for she never seemed to know what to do with her long limbs, which were very much in her way. She had a decided mouth, a comical nose, and sharp, gray eyes, which appeared to see everything, and were by turns fierce, funny, or thoughtful. Her long, thick hair was her one beauty, but it was usually bundled into a net, to be out of her way. Round shoulders had Jo, big hands and feet, a flyaway look to her clothes, and the uncomfortable appearance of a girl who was rapidly shooting up into a woman and didn't like it. Elizabeth, or Beth, as everyone called her, was a rosy, smooth-haired, bright-eyed girl of thirteen, with a shy manner, a timid voice, and a peaceful expression which was seldom disturbed. Her father called her 'Little Miss Tranquility', and the name suited her excellently, for she seemed to live in a happy world of her own, only venturing out to meet the few whom she trusted and loved. Amy, though the youngest, was a most important person, in her own opinion at least. ('Little Women' by Louisa May Alcott)",
+    "I don't have the strength to keep writing this. To go on living with this feeling is painful beyond description. Isn't there someone kind enough to strangle me in my sleep? ('No Longer Human' Osamu Dazai)",
 
-    "short for testing ahaha"
+    "I thought, “I want to die. I want to die more than ever before. There’s no chance now of a recovery. No matter what sort of thing I do, no matter what I do, it’s sure to be a failure, just a final coating applied to my shame. That dream of going on bicycles to see a waterfall framed in summer leaves—it was not for the likes of me. All that can happen now is that one foul, humiliating sin will be piled on another, and my sufferings will become only the more acute. I want to die. I must die. Living itself is the source of sin. ('No Longer Human' Osamu Dazai)",
+
+    "This I want to believe implicitly: Man was born for love and revolution. ('The Setting Sun' Osamu Dazai)",
+
+    "Whoever fights monsters should see to it that in the process he does not become a monster. And if you gaze long enough into an abyss, the abyss will gaze back into you. (Friedrich Nietzsche)",
+
+    "Pain and suffering are always inevitable for a large intelligence and a deep heart. The really great men must, I think, have great sadness on earth. ('Crime and Punishment' Fyodor Dostoevsky)",
+
+    "I am afraid because I can so clearly foresee my own life rotting away of itself, like a leaf that rots without falling, while I pursue my round of existence from day to day. ('The Setting Sun' Osamu Dazai)",
+
+    "I found myself wondering why I had once been a human being...How can others understand what I feel? They cannot--unless they have experienced the very same thing. ('The Moon Over The Mountain' Atsushi Nakajima)",
+
+    "Not all the leaves have fallen yet. When I look at the distant mountains, my heart is filled with yearning and longs to vanish into them. ('River Mist and Other Stories' Doppo Kunikida)",
+
+    "As long as I can make them laugh, it doesn’t matter how, I’ll be alright. If I succeed in that, the human beings probably won’t mind it too much if I remain outside their lives. The one thing I must avoid is becoming offensive in their eyes: I shall be nothing, the wind, the sky. ('No Longer Human' Osamu Dazai)"
   ]
 
 const quoteDisplayElement = document.getElementById('quoteDisplay')
@@ -179,7 +193,7 @@ quoteInputElement.addEventListener('input', () => {
 
   }
 
-  // mistakes draw each bpdy part of the prisoner
+  // mistakes draw each body part of the prisoner
   if (mistakes == 1) {
     drawHead();
   } else if (mistakes == 2) {
