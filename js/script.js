@@ -113,7 +113,7 @@ function drawLeftArm() {
 // typing part of the game
 
 const arrayQuote =
-  [ // 8 quotes
+  [ // 8 quotes (Some are harder and longer on purpose)
     "A leader is best when people barely know he exists, when his work is done, his aim fulfilled, they will say: we did it ourselves. (Lao Tzu)",
 
     "Beloved Pan, and all ye other gods who haunt this place, give me beauty in the inward soul; and may the outward and inward be at one. (Socrates)",
@@ -207,7 +207,7 @@ quoteInputElement.addEventListener('input', () => {
     // game result when the user wins
     gameresult.innerText = "W's in the chat"
     wpm.innerText = "Wpm: " + Math.floor((60 / currentTime) * getWordCount(quote))
-    accuracy.innerText = "Accuracy: " + (quote.length - mistakes) / quote.length * 100 + "%"
+    accuracy.innerText = "Accuracy: " + ((quote.length - mistakes) / quote.length * 100), toFixed(2) + "%"
     time.innerText = "Time: " + currentTime
     error.innerText = "Mistakes: " + mistakes
     clearInterval(intervalID)
