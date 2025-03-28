@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name=" viewport" content="width = device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Oranienbaum&display=swap"
+    rel="stylesheet">
+  <title>Hangman with a twist</title>
+
+</head>
+
+
+<body>
+  <div class="main-container" id="mainContainer">
+
+    <canvas>
+    </canvas>
+
+
+    <div class="sub-container" id="subContainer">
+
+      <script src="js/script.js" defer></script>
+
+      <div class="timer" id="timer">
+      </div>
+
+      <div class="container">
+        <div class="quote-display" id="quoteDisplay">
+
+        </div>
+        <textarea id="quoteInput" onKeyDown="preventBackspace();" class="quote-input" autofocus></textarea>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Game Result Modal -->
+  <div id="result-modal" class="resultModal">
+
+    <!-- Result Modal Content -->
+    <div class="resultModal-content">
+      <ul>
+        <p id="game-result"></p>
+        <hr>
+        <p>Stats:</p>
+
+        <li id="wpm"> </li>
+        <li id="accuracy"> </li>
+        <li id="time"> </li>
+        <li id="error"> </li>
+        <button id="retry" type="button" onclick="restart()">retry ?</button>
+
+
+      </ul>
+
+
+    </div>
+
+  </div>
+  <!-- Instruction Modal -->
+  <div id="instruction-modal" class="instructionModal">
+
+
+    <!-- Instruction Modal Content -->
+    <div class="instructionModal-content">
+      <ul>
+        <p>Instructions: </p>
+        <hr>
+        <p>Objective: Type the given paragraph as quickly and accurately as possible before the timer runs out. Be
+          careful... too many mistakes will cost a life!</p>
+
+        <li>Complete the paragraph before 30 seconds to win.</li>
+        <li>Make 6 or more errors, and it's an automatic game over. </li>
+        <li>If the timer reaches 30 seconds and the paragraph isn’t finished, you lose instantly, regardless of errors.
+        </li>
+        <li>Each incorrect letter counts as an error, so type carefully! </li>
+        <button id="retry" type="button" onclick="restart()">Begin</button>
+
+
+      </ul>
+
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
