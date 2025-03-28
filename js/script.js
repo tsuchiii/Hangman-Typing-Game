@@ -128,7 +128,10 @@ const arrayQuote =
 
     "Tell me, O Muse, of that ingenious hero who travelled far and wide after he had sacked the famous town of Troy. Many cities did he visit, and many were the nations with whose manners and customs he was acquainted; moreover he suffered much by sea while trying to save his own life and bring his men safely home; but do what he might he could not save his men, for they perished through their own sheer folly in eating the cattle of the Sun-god Hyperion; so the god prevented them from ever reaching home. Tell me, too, about all these things, oh daughter of Jove, from whatsoever source you may know them. ('The Odyssey' by Homer)",
 
-    "Margaret, the eldest of the four, was sixteen, and very pretty, being plump and fair, with large eyes, plenty of soft brown hair, a sweet mouth, and white hands, of which she was rather vain. Fifteen-year-old Jo was very tall, thin, and brown, and reminded one of a colt, for she never seemed to know what to do with her long limbs, which were very much in her way. She had a decided mouth, a comical nose, and sharp, gray eyes, which appeared to see everything, and were by turns fierce, funny, or thoughtful. Her long, thick hair was her one beauty, but it was usually bundled into a net, to be out of her way. Round shoulders had Jo, big hands and feet, a flyaway look to her clothes, and the uncomfortable appearance of a girl who was rapidly shooting up into a woman and didn't like it. Elizabeth, or Beth, as everyone called her, was a rosy, smooth-haired, bright-eyed girl of thirteen, with a shy manner, a timid voice, and a peaceful expression which was seldom disturbed. Her father called her 'Little Miss Tranquility', and the name suited her excellently, for she seemed to live in a happy world of her own, only venturing out to meet the few whom she trusted and loved. Amy, though the youngest, was a most important person, in her own opinion at least. ('Little Women' by Louisa May Alcott)",]
+    "Margaret, the eldest of the four, was sixteen, and very pretty, being plump and fair, with large eyes, plenty of soft brown hair, a sweet mouth, and white hands, of which she was rather vain. Fifteen-year-old Jo was very tall, thin, and brown, and reminded one of a colt, for she never seemed to know what to do with her long limbs, which were very much in her way. She had a decided mouth, a comical nose, and sharp, gray eyes, which appeared to see everything, and were by turns fierce, funny, or thoughtful. Her long, thick hair was her one beauty, but it was usually bundled into a net, to be out of her way. Round shoulders had Jo, big hands and feet, a flyaway look to her clothes, and the uncomfortable appearance of a girl who was rapidly shooting up into a woman and didn't like it. Elizabeth, or Beth, as everyone called her, was a rosy, smooth-haired, bright-eyed girl of thirteen, with a shy manner, a timid voice, and a peaceful expression which was seldom disturbed. Her father called her 'Little Miss Tranquility', and the name suited her excellently, for she seemed to live in a happy world of her own, only venturing out to meet the few whom she trusted and loved. Amy, though the youngest, was a most important person, in her own opinion at least. ('Little Women' by Louisa May Alcott)",
+
+    "short for testing ahaha"
+  ]
 
 const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
@@ -207,7 +210,7 @@ quoteInputElement.addEventListener('input', () => {
     // game result when the user wins
     gameresult.innerText = "W's in the chat"
     wpm.innerText = "Wpm: " + Math.floor((60 / currentTime) * getWordCount(quote))
-    accuracy.innerText = "Accuracy: " + ((quote.length - mistakes) / quote.length * 100), toFixed(2) + "%"
+    accuracy.innerText = "Accuracy: " + ((quote.length - mistakes) / quote.length * 100).toFixed(2) + "%"
     time.innerText = "Time: " + currentTime
     error.innerText = "Mistakes: " + mistakes
     clearInterval(intervalID)
