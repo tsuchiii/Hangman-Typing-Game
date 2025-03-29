@@ -144,7 +144,9 @@ const arrayQuote =
 
     "Not all the leaves have fallen yet. When I look at the distant mountains, my heart is filled with yearning and longs to vanish into them. ('River Mist and Other Stories' Doppo Kunikida)",
 
-    "As long as I can make them laugh, it doesn’t matter how, I’ll be alright. If I succeed in that, the human beings probably won’t mind it too much if I remain outside their lives. The one thing I must avoid is becoming offensive in their eyes: I shall be nothing, the wind, the sky. ('No Longer Human' Osamu Dazai)"
+    "As long as I can make them laugh, it doesn’t matter how, I’ll be alright. If I succeed in that, the human beings probably won’t mind it too much if I remain outside their lives. The one thing I must avoid is becoming offensive in their eyes: I shall be nothing, the wind, the sky. ('No Longer Human' Osamu Dazai)",
+
+    "easy"
   ]
 
 const quoteDisplayElement = document.getElementById('quoteDisplay')
@@ -157,6 +159,10 @@ let mistakes = 0
 let currentTime = 0
 let input = ""
 let place = 0
+
+const hangmanSound = new Audio('../img/cracking_sound.mp3');
+const winSound = new Audio('../img/win.mp3');
+const loseSound = new Audio('../img/lose.mp3');
 
 // instruction modal for the game when the window first loads
 window.onload = function () {
@@ -195,18 +201,25 @@ quoteInputElement.addEventListener('input', () => {
 
   // mistakes draw each body part of the prisoner
   if (mistakes == 1) {
+    hangmanSound.play()
     drawHead();
   } else if (mistakes == 2) {
+    hangmanSound.play()
     drawTorso()
   } else if (mistakes == 3) {
+    hangmanSound.play()
     drawLeftArm()
   } else if (mistakes == 4) {
+    hangmanSound.play()
     drawRightArm()
   } else if (mistakes == 5) {
+    hangmanSound.play()
     drawLeftLeg()
   } else if (mistakes == 6) {
+    hangmanSound.play()
     drawRightLeg()
     // calls the game result function when the user loses
+    loseSound.play()
     losingResults(quote)
     clearInterval(intervalID)
 
@@ -222,6 +235,7 @@ quoteInputElement.addEventListener('input', () => {
     let error = document.getElementById("error")
 
     // game result when the user wins
+    winSound.play()
     gameresult.innerText = "W's in the chat"
     wpm.innerText = "Wpm: " + Math.floor((60 / currentTime) * getWordCount(quote))
     accuracy.innerText = "Accuracy: " + ((quote.length - mistakes) / quote.length * 100).toFixed(2) + "%"
@@ -329,6 +343,7 @@ function startTimer() {
     currentTime++
     timer.innerText = getTimerTime(startTime)
     if (timer.innerText == "30") {
+      loseSound.play()
       losingResults(arrayQuote[randomNumber])
       clearInterval(intervalID)
     }
