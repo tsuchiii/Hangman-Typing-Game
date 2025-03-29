@@ -146,7 +146,6 @@ const arrayQuote =
 
     "As long as I can make them laugh, it doesn’t matter how, I’ll be alright. If I succeed in that, the human beings probably won’t mind it too much if I remain outside their lives. The one thing I must avoid is becoming offensive in their eyes: I shall be nothing, the wind, the sky. ('No Longer Human' Osamu Dazai)",
 
-    "easy"
   ]
 
 const quoteDisplayElement = document.getElementById('quoteDisplay')
@@ -160,6 +159,7 @@ let currentTime = 0
 let input = ""
 let place = 0
 
+// added some music (loseSound will continue to play after one mistake for added pressure)
 const hangmanSound = new Audio('../img/cracking_sound.mp3');
 const winSound = new Audio('../img/win.mp3');
 const loseSound = new Audio('../img/lose.mp3');
