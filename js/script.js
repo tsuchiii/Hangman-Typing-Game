@@ -201,24 +201,31 @@ quoteInputElement.addEventListener('input', () => {
 
   // mistakes draw each body part of the prisoner
   if (mistakes == 1) {
+    let hangmanSound = new Audio("../img/cracking_sound.mp3");
     hangmanSound.play()
     drawHead();
   } else if (mistakes == 2) {
+    let hangmanSound = new Audio("../img/cracking_sound.mp3");
     hangmanSound.play()
     drawTorso()
   } else if (mistakes == 3) {
+    let hangmanSound = new Audio("../img/cracking_sound.mp3");
     hangmanSound.play()
     drawLeftArm()
   } else if (mistakes == 4) {
+    let hangmanSound = new Audio("../img/cracking_sound.mp3");
     hangmanSound.play()
     drawRightArm()
   } else if (mistakes == 5) {
+    let hangmanSound = new Audio("../img/cracking_sound.mp3");
     hangmanSound.play()
     drawLeftLeg()
   } else if (mistakes == 6) {
+    let hangmanSound = new Audio("../img/cracking_sound.mp3");
     hangmanSound.play()
     drawRightLeg()
     // calls the game result function when the user loses
+    let loseSound = new Audio("../img/lose.mp3");
     loseSound.play()
     losingResults(quote)
     clearInterval(intervalID)
@@ -235,6 +242,7 @@ quoteInputElement.addEventListener('input', () => {
     let error = document.getElementById("error")
 
     // game result when the user wins
+    let winSound = new Audio("../img/win.mp3");
     winSound.play()
     gameresult.innerText = "W's in the chat"
     wpm.innerText = "Wpm: " + Math.floor((60 / currentTime) * getWordCount(quote))
@@ -343,6 +351,7 @@ function startTimer() {
     currentTime++
     timer.innerText = getTimerTime(startTime)
     if (timer.innerText == "30") {
+      let loseSound = new Audio("../img/lose.mp3");
       loseSound.play()
       losingResults(arrayQuote[randomNumber])
       clearInterval(intervalID)
