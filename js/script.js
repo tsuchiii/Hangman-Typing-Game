@@ -160,9 +160,9 @@ let input = ""
 let place = 0
 
 // added some music (loseSound will continue to play after one mistake for added pressure)
-let hangmanSound = new Audio("../img/cracking_sound.mp3");
-let winSound = new Audio("../img/win.mp3");
-let loseSound = new Audio("../img/lose.mp3");
+let hangmanSound = new Audio("/img/cracking_sound.mp3");
+let winSound = new Audio("/img/win.mp3");
+let loseSound = new Audio("/img/lose.mp3");
 
 // instruction modal for the game when the window first loads
 window.onload = function () {
